@@ -4,8 +4,9 @@ import logo from "../../assets/logo (2).png"
 const Navbar = () => {
     const Navlinks=<>
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/tests'>All Tests</NavLink></li>
-    <li><NavLink to='/details'>Details</NavLink></li>
+    <li><NavLink to='/allTest'>All Test</NavLink></li>
+    <li><NavLink to='/login'>Login</NavLink></li>
+    <li><NavLink to='/lo'>Login</NavLink></li>
     </>
   return (
     <div className="navbar fixed z-20 bg-slate-600 opacity-80 text-white max-w-7xl mx-auto rounded-lg">
