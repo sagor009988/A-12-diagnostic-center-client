@@ -6,7 +6,8 @@ import Navbar from "../Shared/Navbar/Navbar";
 const MainLayout = () => {
     const location=useLocation();
    
-    const islogin=location.pathname.includes('/login')
+    const islogin=location.pathname.includes('/login') ||
+    location.pathname.includes('/register')
     return (
         <div>
             {islogin || <Navbar></Navbar>}
