@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "dr_Name": "Dr. Smith",
+      "health_recommendation": "Maintain a balanced diet and exercise regularly.",
+      "img": "https://i.ibb.co/xCxTQLX/images-22.jpg"
+    },
+    {
+      "id": 2,
+      "dr_Name": "Dr. Johnson",
+      "health_recommendation": "Get enough sleep and stay hydrated.",
+      "img": "https://i.ibb.co/8KB5Mzr/images-23.jpg"
+    },
+    {
+      "id": 3,
+      "dr_Name": "Dr. Clara",
+      "health_recommendation": "Practice stress-reducing activities like meditation.",
+      "img": "https://i.ibb.co/sQGrnC1/images-24.jpg"
+    }
+  ]

@@ -17,7 +17,10 @@ import AdminRoute from "./AdminRoute";
 import ManageTestsByAdmin from "../Pages/DashBoard/ManageTestsByAdmin";
 import UpdateATest from "../Pages/DashBoard/UpdateATest";
 import AllReserVation from "../Pages/DashBoard/AllReserVation";
-import Payment from "../Pages/DashBoard/Payment";
+import Payment from "../Pages/DashBoard/Payment/Payment";
+import PaymentHistory from "../Pages/DashBoard/PaymentHistory";
+import MyHome from "../Pages/DashBoard/MyHome";
+
 
 
 export const router = createBrowserRouter([
@@ -64,6 +67,16 @@ export const router = createBrowserRouter([
         {
           path:'payment',
           element:<Payment></Payment>
+
+        },
+        {
+          path:'paymentHistory',
+          element:<PaymentHistory></PaymentHistory>
+
+        },
+        {
+          path:'myHome',
+          element:<MyHome></MyHome>
 
         },
         // admin pannel

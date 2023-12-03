@@ -10,7 +10,7 @@ const Register = () => {
   const axiosPublic=useAxiosPublic()
   const navigate=useNavigate()
 const {createUser,updateUserProfile}=useAuth()
-  const {register,handleSubmit,reset, formState: { errors },setValue} = useForm({
+  const {register,handleSubmit,reset, formState: { errors },} = useForm({
     defaultValues: {
       district: "", 
       upazila: "", 

@@ -9,18 +9,21 @@ import {
   FaHouseMedical,
   FaList,
   FaNode,
-  FaPhone,
+
   FaUsers,
 } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import { PiFlagBannerDuotone } from "react-icons/pi";
 import useAdmin from "../Hooks/useAdmin";
 
+import useUserTest from "../Hooks/useUserTest";
+
 
 
 const DashBoard = () => {
   const [isAdmin] = useAdmin()
-  // const isAdmin=true;
+  const [test]=useUserTest()
+  
   console.log(isAdmin);
   return (
     <div className="md:flex  my-5">
@@ -75,8 +78,8 @@ const DashBoard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="bg-amber-300" to="/dashBoard/myBooking">
-                  <FaCalendarCheck></FaCalendarCheck> My Booking
+                <NavLink className="bg-amber-300" to="/dashBoard/paymentHistory">
+                  <FaCalendarCheck></FaCalendarCheck> Payment History
                 </NavLink>
               </li>
               <li>
@@ -89,7 +92,7 @@ const DashBoard = () => {
               </li>
               <li>
                 <NavLink className="bg-amber-300" to="/dashBoard/cart">
-                  <FaBookMedical></FaBookMedical> My Booking Test
+                  <FaBookMedical></FaBookMedical> My Booking Test:<span className="text-2xl font-bold text-white">({test.length})</span>
                 </NavLink>
               </li>
             </>
@@ -107,11 +110,7 @@ const DashBoard = () => {
               <FaNode></FaNode> All Test
             </NavLink>
           </li>
-          <li>
-            <NavLink className="bg-amber-300" to="/contact">
-              <FaPhone></FaPhone> Contact
-            </NavLink>
-          </li>
+         
         </ul>
       </div>
       <div className="flex-1 bg-red border-2 ">
