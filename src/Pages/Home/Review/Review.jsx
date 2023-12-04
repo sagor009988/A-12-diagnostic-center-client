@@ -11,7 +11,7 @@ import { Rating } from "@smastrom/react-rating";
 const Review = () => {
     const [reviews,setReview]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/reviews')
+        fetch('https://diagonistic-center-server.vercel.app/reviews')
         .then(res=>res.json())
         .then(data=>{
             setReview(data)

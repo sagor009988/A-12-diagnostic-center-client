@@ -32,7 +32,7 @@ const DashBoard = () => {
           {isAdmin ? (
             <>
               <li>
-                <NavLink className="bg-amber-300" to="/dashBoard/adminHome">
+                <NavLink className="bg-amber-300" to="/dashBoard/admin">
                   <FaHouseMedical></FaHouseMedical> Admin Home
                 </NavLink>
               </li>

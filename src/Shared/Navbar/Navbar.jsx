@@ -3,11 +3,13 @@ import logo from "../../assets/logo (2).png";
 import useAuth from "../../Hooks/useAuth";
 import { FaUserDoctor } from "react-icons/fa6";
 import useUserTest from "../../Hooks/useUserTest";
+import useAdmin from "../../Hooks/useAdmin";
 
 
 const Navbar = () => {
   const [test]=useUserTest()
   const { user, logout } = useAuth();
+  const [isadmin]=useAdmin()
   
   const handleLogOut = () => {
     logout()
@@ -26,15 +28,23 @@ const Navbar = () => {
       <li>
         <NavLink to="/allTest">All Test</NavLink>
       </li>
+      {
+        user && isadmin &&  <li> <NavLink to="/dashBoard/admin">
+        <button className="flex gap-2">
+        <FaUserDoctor className="text-xl"/>
+          <div className="badge badge-secondary">+{test.length}</div>
+        </button>
+      </NavLink></li>
+      }
       
-      <li>
-        <NavLink to="/dashBoard/cart">
-          <button className="flex gap-2">
-          <FaUserDoctor className="text-xl"/>
-            <div className="badge badge-secondary">+{test.length}</div>
-          </button>
-        </NavLink>
-      </li>
+      {
+        user && !isadmin && <li> <NavLink to="/dashBoard/cart">
+        <button className="flex gap-2">
+        <FaUserDoctor className="text-xl"/>
+          <div className="badge badge-secondary">+{test.length}</div>
+        </button>
+      </NavLink></li>
+      }
 
       {user ? (
         <>

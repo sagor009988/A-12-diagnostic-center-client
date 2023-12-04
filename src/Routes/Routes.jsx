@@ -20,6 +20,7 @@ import AllReserVation from "../Pages/DashBoard/AllReserVation";
 import Payment from "../Pages/DashBoard/Payment/Payment";
 import PaymentHistory from "../Pages/DashBoard/PaymentHistory";
 import MyHome from "../Pages/DashBoard/MyHome";
+import AdminHome from "../Pages/DashBoard/AdminHome";
 
 
 
@@ -40,7 +41,7 @@ export const router = createBrowserRouter([
         {
           path:'/details/:id',
           element:<Details></Details>,
-          loader:({params})=>fetch(`http://localhost:5000/tests/${params.id}`)
+          loader:({params})=>fetch(`https://diagonistic-center-server.vercel.app/tests/${params.id}`)
         },
         {
           path:'/login',
@@ -89,8 +90,8 @@ export const router = createBrowserRouter([
           element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
         },
         {
-          path:'adminHome',
-          element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
+          path:'/dashBoard/admin',
+          element:<AdminRoute> <AdminHome></AdminHome></AdminRoute>
         },
         {
           path:'allTest',
@@ -99,7 +100,7 @@ export const router = createBrowserRouter([
         {
           path:'updateTest/:id',
           element:<AdminRoute><UpdateATest></UpdateATest></AdminRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/tests/${params.id}`)
+          loader:({params})=>fetch(`https://diagonistic-center-server.vercel.app/tests/${params.id}`)
         },
         {
           path:'reservation',

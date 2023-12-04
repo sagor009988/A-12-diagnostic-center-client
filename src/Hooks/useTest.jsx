@@ -9,7 +9,7 @@ const useTest = () => {
     // const [tests,setTests]=useState([]);
     // useEffect(()=>{
     //     // setLoading(true)
-    //     fetch('http://localhost:5000/tests')
+    //     fetch('https://diagonistic-center-server.vercel.app/tests')
     //     .then(res=>res.json())
     //     .then(data=>setTests(data))
     // },[])
