@@ -1,8 +1,9 @@
-# React + Vite
+#Diagnostic center
+## live link: https://diagonistic-center.web.app/
+# Application 5 features;
+### 1.user can see all test and details.
+### 2.user can get a cupon and also use to discount test price.
+### 3. user can book the date for test and there also have a option to pay confirm the test ,user can download there report
+### 4.admin can maintain all users and post and banner;
+### 5 admin  can delete or block user 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
